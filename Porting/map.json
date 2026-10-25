@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "package": "swift-ai-groq",
+  "status": "coarse-import",
+  "upstream": [
+    {
+      "name": "@ai-sdk/groq",
+      "implementation": [
+        "packages/groq/src"
+      ],
+      "tests": [
+        "packages/groq/src/convert-groq-usage.test.ts",
+        "packages/groq/src/convert-to-groq-chat-messages.test.ts",
+        "packages/groq/src/groq-chat-language-model-options.test.ts",
+        "packages/groq/src/groq-chat-language-model.test.ts",
+        "packages/groq/src/groq-lazy-schemas.test.ts",
+        "packages/groq/src/groq-prepare-tools.test.ts",
+        "packages/groq/src/groq-transcription-model.test.ts",
+        "packages/groq/src/structured-output-with-tools.test.ts"
+      ]
+    }
+  ],
+  "swift": {
+    "sources": [
+      "Sources/SwiftAIGroq/GroqLanguageHelpers.swift",
+      "Sources/SwiftAIGroq/GroqModels.swift",
+      "Sources/SwiftAIGroq/GroqProvider.swift",
+      "Sources/SwiftAIGroq/GroqProviderOptions.swift",
+      "Sources/SwiftAIGroq/GroqTranscriptionModel.swift"
+    ],
+    "tests": [
+      "Tests/SwiftAIGroqTests/FixtureDownloadTransport.swift",
+      "Tests/SwiftAIGroqTests/GroqProviderTests.swift",
+      "Tests/SwiftAIGroqTests/GroqStreamingAndTranscriptionTests.swift",
+      "Tests/SwiftAIGroqTests/TestSupport.swift"
+    ],
+    "resources": []
+  },
+  "differences": [
+    {
+      "kind": "native-adaptation",
+      "reason": "Preserve Swift async/await, Sendable, Foundation transport and existing documented gaps; see Docs/CoreV6Parity.md and PortingStatus.md."
+    }
+  ],
+  "reviewNote": "M6: Groq runtime and focused upstream-derived tests own their package; HTTP construction is shared, options and wire policy remain local. Prior baselines and known gaps are retained.",
+  "canonicalOnlyReferences": [],
+  "canonicalDirectory": "Packages/swift-ai-groq"
+}

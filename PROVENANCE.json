@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "package": "swift-ai-groq",
+  "version": "1.0.0",
+  "releaseID": "modular-3",
+  "source": {
+    "commit": "7fc9b4cd72f8f83b75ba7eee2e38d37127539317",
+    "baseCommit": "7fc9b4cd72f8f83b75ba7eee2e38d37127539317",
+    "workingTree": false,
+    "inputsSHA256": "49b802ba4a30454f78c9886ab3114537ef659ab3e6db7775479b7351f6e3f0ab"
+  },
+  "dependencies": [
+    {
+      "package": "swift-ai-core",
+      "from": "1.1.0"
+    }
+  ],
+  "changes": [
+    {
+      "id": "remaining-package-extraction",
+      "notes": "Extract the existing runtime, typed settings and standalone tests from the compatibility aggregate. Preserve the reviewed npm baseline and existing capability/gap boundaries.",
+      "compatibility": "Initial independent Swift package version. Existing SwiftAISDK entry points remain in the development compatibility facade; no npm-version equivalence is implied."
+    }
+  ],
+  "canonicalDirectory": "Packages/swift-ai-groq",
+  "upstream": [
+    {
+      "name": "@ai-sdk/groq",
+      "reviewedVersion": "4.0.70",
+      "ledgerKind": "provider",
+      "evidence": "`AIProviders.groq`, `GroqLanguageModel`, `GroqTranscriptionModel`, `GroqProviderTests.swift`",
+      "reviewStatus": "imported-reviewed-with-gaps",
+      "archiveIntegrity": "sha512-DyqyTddHR8KvxkZeDz/EZRPrcSMadphdZgxAtqUbhWm7Txu3tuOtjTL8ViAgvi86FWvxIAwMXFaXLCPLVAmmrQ==",
+      "sourceRef": "npm:@ai-sdk/groq@4.0.70",
+      "testRef": "682e2dd71456f14f9da33a1b983d1998c3a1184c",
+      "testRefRelationship": "inventory-snapshot-not-release-verified",
+      "contractFamilies": [],
+      "contractReview": "not-imported; inspect upstream declarations before extraction"
+    }
+  ],
+  "note": "Independent port. Imported test refs and contract review gaps retain their original status; export is not new upstream parity proof.",
+  "canonicalInputs": [
+    {
+      "canonicalPath": ".github/workflows/package-check.yml",
+      "sha256": "7ff448e130f7aed96c38accdf828b6d993997ebc5317358347e9a70a649e67ca"
+    },
+    {
+      "canonicalPath": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-groq/Package.swift",
+      "sha256": "70e0df583c469e7768393a908e30e6d169bfef70d4b6958c71eab323767941d4"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-groq/Porting/map.json",
+      "sha256": "f34d17e9557ea98594115266ba5f2870e60c45f81b48aeb7437e91c9182cd4a1"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-groq/README.md",
+      "sha256": "2ecafa0e914acdcb0facd121e6b138b6d5b0b05dda4cf4b8c8b36f2098580998"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-groq/Sources/SwiftAIGroq/GroqLanguageHelpers.swift",
+      "sha256": "ac2086c90182da9e26971417b68a1235d0f85ec46542b129fd05c0f10766ea80"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-groq/Sources/SwiftAIGroq/GroqModels.swift",
+      "sha256": "9e49e08584b82235f1cea0c7a8554db389580f329aad6f9d3d549181935fc94d"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-groq/Sources/SwiftAIGroq/GroqProvider.swift",
+      "sha256": "79d153a1673e89d1f66835d0bdb33f58926a5580c1c6169c1728ee019f654d0b"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-groq/Sources/SwiftAIGroq/GroqProviderOptions.swift",
+      "sha256": "bb575a93dc0c23019e6cb8dd05dad550b8493043463fe6f8127412fd296a8211"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-groq/Sources/SwiftAIGroq/GroqTranscriptionModel.swift",
+      "sha256": "cd9a3814820325073e17448adc659170ce154a7fbbc5f97dbe44e7a968dd3f64"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-groq/Tests/SwiftAIGroqTests/FixtureDownloadTransport.swift",
+      "sha256": "533b37e002c04497b31144d1f276c4329c75c7438689efc1458cb7371a4a7685"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-groq/Tests/SwiftAIGroqTests/GroqProviderTests.swift",
+      "sha256": "19e0d8f224bd1cd952d3825a472c46770b9fc675bb436901eeaf682d807b9b32"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-groq/Tests/SwiftAIGroqTests/GroqStreamingAndTranscriptionTests.swift",
+      "sha256": "02b787b2ab3d75da4767c13ba3c953d21c0601e836ebfcd00d3f3b484f6ec311"
+    },
+    {
+      "canonicalPath": "Packages/swift-ai-groq/Tests/SwiftAIGroqTests/TestSupport.swift",
+      "sha256": "568ccd1b5c82549d64c49e6456df9eaab9593a4aa514c98b8b5ed07488302616"
+    }
+  ]
+}
