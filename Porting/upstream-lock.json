@@ -3,16 +3,20 @@
   "packages": [
     {
       "name": "@ai-sdk/groq",
-      "reviewedVersion": "4.0.70",
+      "reviewedVersion": "4.0.74",
       "ledgerKind": "provider",
-      "evidence": "`AIProviders.groq`, `GroqLanguageModel`, `GroqTranscriptionModel`, `GroqProviderTests.swift`",
+      "evidence": "`AIProviders.groq`, `GroqLanguageModel`, `GroqTranscriptionModel`, `GroqProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json",
       "reviewStatus": "imported-reviewed-with-gaps",
-      "archiveIntegrity": "sha512-DyqyTddHR8KvxkZeDz/EZRPrcSMadphdZgxAtqUbhWm7Txu3tuOtjTL8ViAgvi86FWvxIAwMXFaXLCPLVAmmrQ==",
-      "sourceRef": "npm:@ai-sdk/groq@4.0.70",
-      "testRef": "682e2dd71456f14f9da33a1b983d1998c3a1184c",
-      "testRefRelationship": "inventory-snapshot-not-release-verified",
-      "contractFamilies": [],
-      "contractReview": "not-imported; inspect upstream declarations before extraction"
+      "archiveIntegrity": "sha512-Lu1cLmV6Y7O5ak8/t3MGYtYR53WOsDCt9TusD4DxjsQtptMXMGaCSDCXOMUwhRILb8dEKaicn/aRlWB2MOm/xg==",
+      "sourceRef": "npm:@ai-sdk/groq@4.0.74",
+      "testRef": "9b603d36186b75e58d5479445a96c76f6e2d2700",
+      "testRefRelationship": "matching-release",
+      "contractFamilies": [
+        "LanguageModelV4",
+        "ProviderV4",
+        "TranscriptionModelV4"
+      ],
+      "contractReview": "2026-11-01: published declarations, source and exact matching-release changed tests reviewed; scoped dispositions and Swift translations are in Docs/WeeklyUpstreamAudit20261101.json. Existing broader product gaps remain; reviewed delta is not full-package parity."
     }
   ]
 }
