@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
   "package": "swift-ai-groq",
-  "version": "1.2.0",
-  "releaseID": "weekly-upstream-20261108",
+  "version": "1.2.1",
+  "releaseID": "weekly-upstream-20261114",
   "source": {
-    "commit": "8e233ff96fb809445aff9a5c06bb6149a24b94da",
-    "baseCommit": "8e233ff96fb809445aff9a5c06bb6149a24b94da",
+    "commit": "07fbf86b82d83d9724bd03622e9e87e74395286f",
+    "baseCommit": "07fbf86b82d83d9724bd03622e9e87e74395286f",
     "workingTree": false,
-    "inputsSHA256": "987359720075cb67dd8bc45bdc049aee4c5d5a42b67a7eb148e697ce5d18bd77"
+    "inputsSHA256": "63e472c0fe891cb7636d225e1c6467e4761dc3721be68081f2afa9f0b656bb29"
   },
   "dependencies": [
     {
@@ -17,29 +17,29 @@
   ],
   "changes": [
     {
-      "id": "weekly-upstream-20261108",
-      "notes": "Implement native URL transcription/limited redirect decline and text response/replay fixes. Reviewed published upstream delta: @ai-sdk/groq 4.0.74 to 4.0.78. Validation passed: node Scripts/test-packages.mjs (all 52 owning packages plus the complete local facade; 3,965 reported tests and 33 explicit live skips); node Scripts/sdk.mjs dev test; node Scripts/sdk.mjs generate --check; node --test Scripts/tests/*.test.cjs (27 passed); core/provider isolation and version resolution; 52 deterministic package exports, 106 catalog consumers and four additional exact retained-minimum graphs; docs-site install/check/build (100 pages); git diff --check. No paid live-service calls were run. The publication pipeline requires successful Swift 6.3.3 CI at the exact canonical source before publishing.",
-      "compatibility": "Minor release for additive native functionality under the project convention. Existing call sites and exact old selectors are retained. Direct minimums change only for concrete API use or required inherited behavior. Version-delta review does not establish full-package parity or live-service acceptance. Updated direct ranges: swift-ai-core 1.2.0 to 1.3.0."
+      "id": "weekly-upstream-20261114",
+      "notes": "Refresh the versioned request identity while retaining the current native request, response and stream behavior. Internal upstream model-catalog reorganizations preserve the existing native policies. Reviewed npm delta: @ai-sdk/groq 4.0.78 to 4.0.83. Validation: `node Scripts/test-packages.mjs` passed all 52 owning suites and 1731 facade tests; tooling 27/27, generation/isolation checks, standalone exports and 106 minimum/latest consumers, documentation check and 101-page build passed. Publication requires green exact-source Swift 6.3.3 CI. Paid/live verification and full-package parity are not claimed.",
+      "compatibility": "Compatible behavior/header correction. Original public selectors are preserved. npm baselines and Swift SemVer are independent; this reviewed delta does not establish full-package or live-service parity."
     }
   ],
   "canonicalDirectory": "Packages/swift-ai-groq",
   "upstream": [
     {
       "name": "@ai-sdk/groq",
-      "reviewedVersion": "4.0.78",
+      "reviewedVersion": "4.0.83",
       "ledgerKind": "provider",
-      "evidence": "`AIProviders.groq`, `GroqLanguageModel`, `GroqTranscriptionModel`, `GroqProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/WeeklyUpstreamAudit20261108.json",
+      "evidence": "`AIProviders.groq`, `GroqLanguageModel`, `GroqTranscriptionModel`, `GroqProviderTests.swift`; 2026-11-01 delta: Docs/WeeklyUpstreamAudit20261101.json; 2026-11-08 delta: Docs/WeeklyUpstreamAudit20261108.json; 2026-11-14 delta: Docs/WeeklyUpstreamAudit20261114.json",
       "reviewStatus": "imported-reviewed-with-gaps",
-      "archiveIntegrity": "sha512-MphM4VQICkecl9hLDjQb3R9l7wdRk2VbbGzlvnLTdHmBT1btwFj0gZSbBb+ePQk1J3GIviQKyAYRwPSq4Aizqw==",
-      "sourceRef": "npm:@ai-sdk/groq@4.0.78",
-      "testRef": "0f3a85f92d1ce06ccde01d662407ef83e097a712",
+      "archiveIntegrity": "sha512-wP1AMgEiMgcxi93K9Yv1dIEcnOls/NCw9H7itlcFjCmXY1yTGfqY6Aa9tdc+oVLdHnRO5nTS2jGpjdgQhiReng==",
+      "sourceRef": "npm:@ai-sdk/groq@4.0.83",
+      "testRef": "8bc7652cdb13fc84722666eb93f45acd0d131eee",
       "testRefRelationship": "matching-release",
       "contractFamilies": [
         "LanguageModelV4",
         "ProviderV4",
         "TranscriptionModelV4"
       ],
-      "contractReview": "2026-11-08: published declarations/source and exact matching-release changed tests reviewed; native implementations, per-file dispositions and broader retained gaps are recorded in Docs/WeeklyUpstreamAudit20261108.json. Reviewed delta is not full-package or live-service parity."
+      "contractReview": "2026-11-14: verified published source/declarations and exact matching-release changed tests reviewed separately; native ports, per-file dispositions and retained gaps are recorded in Docs/WeeklyUpstreamAudit20261114.json. Delta review is not full-package or live-service parity."
     }
   ],
   "note": "Independent port. Imported test refs and contract review gaps retain their original status; export is not new upstream parity proof.",
@@ -58,11 +58,11 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-groq/Porting/map.json",
-      "sha256": "fa4f8b5cc8251701f104295ff41e18f0cf03096cb23e65ecd3613d9f38c82dd3"
+      "sha256": "1af6b75ab7b8c0d7a33ba4785bcdd914a6c132e44f13aa7d5f907b0fd468152e"
     },
     {
       "canonicalPath": "Packages/swift-ai-groq/README.md",
-      "sha256": "d156d10e6e74803937ad8aedf134f302cb43aa2c55182f28ebae60729f1f032f"
+      "sha256": "6c9f35eed37c7b7ba160086dae0da3cc85247e0cc395d180cd090dac44759cdb"
     },
     {
       "canonicalPath": "Packages/swift-ai-groq/Sources/SwiftAIGroq/GroqLanguageHelpers.swift",
@@ -74,7 +74,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-groq/Sources/SwiftAIGroq/GroqProvider.swift",
-      "sha256": "596fea5660c6f98528e63e771c6b9594207b8a8197ef8cfb0476ef6316b1fb41"
+      "sha256": "701bd8b1efc12791ecfea7ac5fb013fe69ae28c71fd24ad035f3d40115b42efd"
     },
     {
       "canonicalPath": "Packages/swift-ai-groq/Sources/SwiftAIGroq/GroqProviderOptions.swift",
@@ -90,7 +90,7 @@
     },
     {
       "canonicalPath": "Packages/swift-ai-groq/Tests/SwiftAIGroqTests/GroqProviderTests.swift",
-      "sha256": "d679ab26cde2a04200257f72ba584017c2bd13ac3791d35d702528e784699730"
+      "sha256": "cb31fe537b816932da5f0ce1a71d30fb73e2af6a7bef12bc2132383b5ff3df55"
     },
     {
       "canonicalPath": "Packages/swift-ai-groq/Tests/SwiftAIGroqTests/GroqStreamingAndTranscriptionTests.swift",

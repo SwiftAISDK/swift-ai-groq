@@ -1,5 +1,5 @@
 <!-- Generated distribution; edit the canonical repository. -->
-# swift-ai-groq 1.2.0
+# swift-ai-groq 1.2.1
 
 Independent Swift-native port of Vercel AI SDK. Source and upstream dispositions are in PROVENANCE.json and Porting/.
 
@@ -8,7 +8,7 @@ Independent Swift-native port of Vercel AI SDK. Source and upstream dispositions
 Add this package to your SwiftPM dependencies:
 
 ```swift
-.package(url: "https://github.com/SwiftAISDK/swift-ai-groq.git", from: "1.2.0")
+.package(url: "https://github.com/SwiftAISDK/swift-ai-groq.git", from: "1.2.1")
 ```
 
 Products: `SwiftAIGroq`.
@@ -29,3 +29,7 @@ See [provider usage and capabilities](https://github.com/SwiftAISDK/SwiftAISDK/b
 ## Behavior notes
 
 `transcribeFromURL` sends HTTP(S) audio URLs without userinfo directly to Groq and removes fragments. It returns nil only for Groq's HTTP 400 redirect-fetch limitation, allowing the facade to use its secure downloader; authentication and other media failures propagate. Plain-text transcription responses work for both URL and file input. Tool replay preserves valid JSON argument text and quotes malformed text.
+
+## Current upstream review
+
+The reviewed baseline is `@ai-sdk/groq` 4.0.83. Published runtime source, declarations and matching-release tests are unchanged from 4.0.78 apart from dependency/version propagation. The user-agent suffix now identifies the reviewed npm baseline. Existing URL transcription, timestamp and language behavior remain unchanged.
