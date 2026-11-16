@@ -32,6 +32,7 @@
       "Tests/SwiftAIGroqTests/FixtureDownloadTransport.swift",
       "Tests/SwiftAIGroqTests/GroqProviderTests.swift",
       "Tests/SwiftAIGroqTests/GroqStreamingAndTranscriptionTests.swift",
+      "Tests/SwiftAIGroqTests/GroqUpstreamParityTests.swift",
       "Tests/SwiftAIGroqTests/TestSupport.swift",
       "Tests/SwiftAIGroqTests/Weekly20261101BehaviorTests.swift",
       "Tests/SwiftAIGroqTests/Weekly20261101CredentialsTests.swift",
